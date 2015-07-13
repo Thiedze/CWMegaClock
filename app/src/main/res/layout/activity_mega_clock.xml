@@ -1,0 +1,113 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MegaClock">
+
+    <TextView
+        android:id="@+id/tvGreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/sbGreen"
+        android:layout_alignParentTop="true"
+        android:text="Green"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:clickable="false" />
+
+    <SeekBar
+        android:id="@+id/sbGreen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tvGreen"
+        android:max="4095" />
+
+    <TextView
+        android:id="@+id/tvBlue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/sbBlue"
+        android:layout_alignLeft="@+id/sbBlue"
+        android:layout_marginBottom="33dp"
+        android:text="Blue"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <SeekBar
+        android:id="@+id/sbBlue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/sbGreen"
+        android:layout_below="@+id/sbGreen"
+        android:layout_marginTop="40dp"
+        android:max="4095" />
+
+    <TextView
+        android:id="@+id/tvRed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/sbRed"
+        android:layout_alignLeft="@+id/sbRed"
+        android:layout_marginBottom="36dp"
+        android:text="Red"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <SeekBar
+        android:id="@+id/sbRed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/sbBlue"
+        android:layout_below="@+id/tvBlue"
+        android:layout_marginTop="43dp"
+        android:max="4095" />
+
+    <ToggleButton
+        android:id="@+id/tbPoints"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ToggleButton"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/tvBrightness"
+        android:layout_alignEnd="@+id/tvBrightness" />
+
+    <Button
+        android:id="@+id/btLocalTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show Local Temperature"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/sbBrightness"
+        android:layout_alignEnd="@+id/sbBrightness"
+        android:layout_toRightOf="@+id/tvBrightness"
+        android:layout_toEndOf="@+id/tvBrightness" />
+
+    <TextView
+        android:id="@+id/tvBrightness"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/sbRed"
+        android:layout_below="@+id/tvRed"
+        android:layout_marginTop="18dp"
+        android:text="Brightness"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <SeekBar
+        android:id="@+id/sbBrightness"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/sbRed"
+        android:layout_below="@+id/tvBrightness"
+        android:max="100" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Color Picker"
+        android:id="@+id/btColorPicker"
+        android:layout_above="@+id/btLocalTemp"
+        android:layout_alignEnd="@+id/btLocalTemp"
+        android:layout_alignStart="@+id/btLocalTemp" />
+
+</RelativeLayout>
